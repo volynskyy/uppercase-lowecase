@@ -1,0 +1,179 @@
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ==================================================== */
+
+body {
+	background-color: rgb(46, 100, 199);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.areaIn,
+.areaOut {
+  height: 300px;
+  width: 800px;
+	background: none;
+	border-radius: 20px;
+	resize: none;
+	padding: 10px 20px;
+	border: 1px solid #000;
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}	
+
+.areaIn {
+	order: 1;
+}
+
+.areaOut {
+	order: 3;
+}
+
+.buttons{
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	order: 2;
+}
+
+.capital, 
+.lower,
+.remove,
+.copy,
+.info, 
+.infoClose {
+	/* padding: 1em 2em; */
+	padding: 10px 20px;
+	border-radius: 20px;
+	background: rgb(14, 154, 179);
+	border: none;
+	cursor: pointer;
+}
+
+.infoClose {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+}
+
+
+.active {
+	background-color: rgba(49, 187, 95, 0.39);
+	transform: translateY(150%);
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	font-size: 34px;
+	border-radius: 25px;
+	transition: .6s;
+}
+
+.describe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(22, 138, 146);
+	width: 50%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	font-size: 40px;
+	padding: 1em 2em;
+	border-radius: 45px;
+	transition: all .6s;
+}
+
+.info {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+}
