@@ -86,7 +86,6 @@ body {
 
 .areaIn,
 .areaOut {
-  height: 300px;
   width: 800px;
 	background: none;
 	border-radius: 20px;
@@ -115,6 +114,7 @@ body {
 
 .buttons{
 	width: 100px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -126,7 +126,10 @@ body {
 .remove,
 .copy,
 .info, 
-.infoClose {
+.infoClose,
+.italic,
+.bold,
+.underline {
 	/* padding: 1em 2em; */
 	padding: 10px 20px;
 	border-radius: 20px;
@@ -147,7 +150,7 @@ body {
 	transform: translateY(150%);
 	width: 90%;
 	margin: 0 auto;
-	display: flex;
+	display: flex;.
 	justify-content: center;
 	align-items: center;
 	height: 70px;
@@ -176,4 +179,20 @@ body {
 	position: absolute;
 	top: 5%;
 	right: 5%;
+}
+
+.active-btn {
+	background: red;
+}
+
+.italic-text {
+	font-style: italic;
+}
+
+.bold-text {
+	font-weight: bold
+}
+
+.underline-text {
+	text-decoration: underline;
 }

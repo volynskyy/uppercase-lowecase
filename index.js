@@ -10,6 +10,9 @@ const successMessage = document.createElement('div')
 const describeMessage = document.createElement('div')
 const info = document.createElement('button')
 const infoClose = document.createElement('button')
+const italics = document.createElement('button')
+const bold = document.createElement('button')
+const underline = document.createElement('button')
 
 buttonCapital.textContent = 'toCapital'
 buttonLower.textContent = 'toLower'
@@ -17,6 +20,10 @@ buttonRemove.textContent = 'Remove'
 buttonCopy.textContent = 'Copy'
 info.textContent = 'What is that?'
 infoClose.textContent = 'Close'
+italics.textContent = 'Italic'
+bold.textContent = 'Bold'
+underline.textContent = 'Underline'
+
 
 document.body.append(inputIn)
 document.body.append(inputOut)
@@ -40,18 +47,24 @@ buttonCopy.classList.add('copy')
 buttonRemove.classList.add('remove')
 info.classList.add('info')
 infoClose.classList.add('infoClose')
+italics.classList.add('italic')
+bold.classList.add('bold')
+underline.classList.add('underline')
 
 buttonCapital.onclick = () => {
 	inputOut.value = inputIn.value.toUpperCase()
 	inputIn.value = '';
 	buttons.append(buttonCopy);
-
+	buttons.append(italics);
+	buttons.append(bold);
+	buttons.append(underline);
 }
 
 buttonLower.onclick = () => {
 	inputOut.value = inputIn.value.toLowerCase()
 	inputIn.value = '';
 	buttons.append(buttonCopy);
+	buttons.append(italics);
 }
 
 buttonRemove.onclick = () => {
@@ -67,11 +80,26 @@ buttonCopy.onclick = () => {
 	setTimeout(() => successMessage.classList.remove('active'), 2000);
 }
 
-info.onclick = () => {
-	describeMessage.textContent = 'тренувальна прога, яка змінює регістр тексту. Чи корисно це мені, хз, но це перше завдання, яке прийшло мені у голову, тому як практика це окей =)';
-	describeMessage.classList.add('describe');
-	describeMessage.append(infoClose)
-	// setTimeout(() => describeMessage.classList.remove('describe'), 3000);
-	setTimeout(() => describeMessage.style.display = 'none', 3000);
+italics.onclick = () => {
+	inputOut.classList.toggle('italic-text')
+	italics.classList.toggle('active-btn')
+}
+bold.onclick = () => {
+	inputOut.classList.toggle('bold-text')
+	bold.classList.toggle('active-btn')
+}
+underline.onclick = () => {
+	inputOut.classList.toggle('underline-text')
+	underline.classList.toggle('active-btn')
 }
 
+info.onclick = () => {
+	describeMessage.textContent = 'тренувальна прога, яка змінює регістр тексту. Чи корисно це мені, хз, но це перше завдання, яке прийшло мені у голову, тому як практика це окей =)';
+
+	describeMessage.classList.add('describe');
+	describeMessage.append(infoClose)	
+}
+
+infoClose.onclick = () => {
+	describeMessage.classList.remove('describe')
+}
