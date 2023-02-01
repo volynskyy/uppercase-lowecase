@@ -1,0 +1,33 @@
+const buttons = document.createElement('div')
+const wrapper = document.createElement('div')
+const inputIn = document.createElement('textarea')
+const inputOut = document.createElement('textarea')
+const buttonCapital = document.createElement('button')
+const buttonLower = document.createElement('button')
+const buttonCopy = document.createElement('button')
+const buttonRemove = document.createElement('button')
+const successMessage = document.createElement('div')
+const describeMessage = document.createElement('div')
+const info = document.createElement('button')
+const infoClose = document.createElement('button')
+const italics = document.createElement('button')
+const bold = document.createElement('button')
+const underline = document.createElement('button')
+
+inputIn.classList.add('areaIn')
+inputOut.classList.add('areaOut')
+wrapper.classList.add('wrapper')
+buttons.classList.add('buttons')
+buttonCapital.classList.add('capital')
+buttonLower.classList.add('lower')
+buttonCopy.classList.add('copy')
+buttonRemove.classList.add('remove')
+info.classList.add('info')
+infoClose.classList.add('infoClose')
+italics.classList.add('italic')
+bold.classList.add('bold')
+underline.classList.add('underline')
+
+export {
+	buttons, wrapper, inputIn, inputOut, buttonCapital, buttonLower, buttonCopy, buttonRemove, successMessage, describeMessage, info, infoClose, italics, bold, underline
+}
