@@ -25,6 +25,7 @@ infoClose.textContent = 'Close'
 italics.textContent = 'Italic'
 bold.textContent = 'Bold'
 underline.textContent = 'Underline'
+successMessage.textContent = 'Text Copied!'
 
 
 document.body.append(inputIn)
@@ -37,6 +38,7 @@ wrapper.append(buttons)
 document.body.append(successMessage)
 document.body.append(info)
 document.body.append(describeMessage)
+document.body.append(successMessage)
 
 // inputIn.classList.add('areaIn')
 // inputOut.classList.add('areaOut')
@@ -75,9 +77,9 @@ buttonRemove.onclick = () => {
 
 buttonCopy.onclick = () => {
 	navigator.clipboard.writeText(inputOut.value);
-	successMessage.textContent = 'Text Copied!';
-	successMessage.classList.add('active');
-	setTimeout(() => successMessage.classList.remove('active'), 2000);
+	successMessage.classList.toggle('message-active')
+	setTimeout(() => successMessage.classList.remove('message-active'), 1500);
+
 }
 
 italics.onclick = () => {
@@ -96,11 +98,11 @@ underline.onclick = () => {
 info.onclick = () => {
 	describeMessage.textContent = 'тренувальна прога, яка змінює регістр тексту. Чи корисно це мені, хз, но це перше завдання, яке прийшло мені у голову, тому як практика це окей =)';
 	describeMessage.classList.add('describe');
-	describeMessage.append(infoClose)	
+	describeMessage.append(infoClose);
 }
 
 infoClose.onclick = () => {
 	describeMessage.classList.remove('describe')
 	infoClose.remove()
-	describeMessage.textContent = ''
+	describeMessage.textContent = '';
 }

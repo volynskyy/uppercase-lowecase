@@ -144,9 +144,9 @@ body {
 	right: 5%;
 }
 
-.active {
+.message-none {
 	background-color: rgba(49, 187, 95, 0.39);
-	transform: translateY(150%);
+	transform: translateY(-550%);
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
@@ -156,6 +156,9 @@ body {
 	font-size: 34px;
 	border-radius: 25px;
 	transition: .6s;
+}
+.message-active {
+	transform: translateY(150%);
 }
 
 .describe {
@@ -195,3 +198,4 @@ body {
 .underline-text {
 	text-decoration: underline;
 }
+

@@ -27,6 +27,7 @@ infoClose.classList.add('infoClose')
 italics.classList.add('italic')
 bold.classList.add('bold')
 underline.classList.add('underline')
+successMessage.classList.add('message-none')
 
 export {
 	buttons, wrapper, inputIn, inputOut, buttonCapital, buttonLower, buttonCopy, buttonRemove, successMessage, describeMessage, info, infoClose, italics, bold, underline
