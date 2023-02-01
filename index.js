@@ -14,7 +14,7 @@
 // const bold = document.createElement('button')
 // const underline = document.createElement('button')
 
-import {buttons, wrapper, inputIn, inputOut, buttonCapital, buttonLower, buttonCopy, buttonRemove, successMessage, describeMessage, info, infoClose, italics, bold, underline} from './variables.js'
+import {buttons, wrapper, inputIn, inputOut, buttonCapital, buttonLower, buttonCopy, buttonRemove, successMessage, describeMessage, info, infoClose, italics, bold, underline} from './modules/variables.js'
 
 buttonCapital.textContent = 'Capital'
 buttonLower.textContent = 'Lower'
@@ -101,4 +101,6 @@ info.onclick = () => {
 
 infoClose.onclick = () => {
 	describeMessage.classList.remove('describe')
+	infoClose.remove()
+	describeMessage.textContent = ''
 }
