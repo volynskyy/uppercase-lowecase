@@ -65,12 +65,17 @@ buttonLower.onclick = () => {
 	inputIn.value = '';
 	buttons.append(buttonCopy);
 	buttons.append(italics);
+	buttons.append(bold);
+	buttons.append(underline);
 }
 
 buttonRemove.onclick = () => {
 	inputIn.value = '';
 	inputOut.value = '';
 	buttonCopy.remove();
+	italics.remove();
+	bold.remove();
+	underline.remove();
 }
 
 buttonCopy.onclick = () => {
