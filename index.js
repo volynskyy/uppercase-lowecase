@@ -14,8 +14,8 @@ const italics = document.createElement('button')
 const bold = document.createElement('button')
 const underline = document.createElement('button')
 
-buttonCapital.textContent = 'toCapital'
-buttonLower.textContent = 'toLower'
+buttonCapital.textContent = 'Capital'
+buttonLower.textContent = 'Lower'
 buttonRemove.textContent = 'Remove'
 buttonCopy.textContent = 'Copy'
 info.textContent = 'What is that?'
