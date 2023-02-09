@@ -144,18 +144,36 @@ body {
 	right: 5%;
 }
 
-.message-none {
+.describe__wrapper {
+	position: relative;
+	height: 100vh;
+	background: #000000b4;
+	visibility: hidden;
+	/* transition: .6 all; */
+}
+.describe__text {
+	transition: margin-right 4s ease-in-out 1s;
+	transition-duration: 500ms;
+	transition-property: margin-right;
 	background-color: rgba(49, 187, 95, 0.39);
-	transform: translateY(-550%);
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 50%;
+	border: 1px solid #000;
 	font-size: 34px;
 	border-radius: 25px;
-	transition: .6s;
+	transition: .6 all;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0px 40px;
+}
+
+.hide__describe {
+	display: block;
 }
 .message-active {
 	transform: translateY(150%);
