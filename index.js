@@ -24,7 +24,7 @@ infoClose.textContent = 'Close'
 italics.textContent = 'Italic'
 bold.textContent = 'Bold'
 underline.textContent = 'Underline'
-successMessage.textContent = 'Text Copied!'
+successMessage.textContent = 'Text Copied!';
 describeMessage.textContent = 'тренувальна прога, яка змінює регістр тексту. Чи корисно це мені, хз, но це перше завдання, яке прийшло мені у голову, тому як практика це окей =)';
 
 
@@ -42,6 +42,7 @@ describe.append(describeMessage)
 describeMessage.append(infoClose)
 document.body.append(successMessage)
 
+
 inputIn.classList.add('areaIn')
 inputOut.classList.add('areaOut')
 wrapper.classList.add('wrapper')
@@ -57,6 +58,8 @@ bold.classList.add('bold')
 underline.classList.add('underline')
 describe.classList.add('describe__wrapper')
 describeMessage.classList.add('describe__text')
+successMessage.classList.add('message__hide')
+
 
 buttonCapital.onclick = () => {
 	if (inputIn.value) {		
@@ -85,8 +88,8 @@ buttonRemove.onclick = () => {
 
 buttonCopy.onclick = () => {
 	navigator.clipboard.writeText(inputOut.value);
-	successMessage.classList.toggle('message-active')
-	setTimeout(() => successMessage.classList.remove('message-active'), 1500);
+	successMessage.classList.add('message__active')
+	setTimeout(() => successMessage.classList.remove('message__active'), 1500);
 
 }
 
@@ -102,12 +105,6 @@ underline.onclick = () => {
 	inputOut.classList.toggle('underline-text')
 	underline.classList.toggle('active-btn')
 }
-
-// info.onclick = () => {
-// 	describeMessage.textContent = 'тренувальна прога, яка змінює регістр тексту. Чи корисно це мені, хз, но це перше завдання, яке прийшло мені у голову, тому як практика це окей =)';
-// 	describeMessage.classList.add('describe');
-// 	describeMessage.append(infoClose);
-// }
 
 info.onclick = () => {
 	describe.style.visibility = 'visible'
